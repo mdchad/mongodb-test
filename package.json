@@ -1,0 +1,23 @@
+{
+  "name": "mongodb-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdchad/mongodb-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdchad/mongodb-test/issues"
+  },
+  "homepage": "https://github.com/mdchad/mongodb-test#readme",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "mongoose": "^5.1.2"
+  }
+}
