@@ -15,12 +15,12 @@ mongoose.connection.once('open', () => {
 });
 
 const html = (persons) => {
-    let b = []
+    let b = ''
     persons.forEach(person => {
-        b.push(`<h1>I'm ${person.name} and I'm a fucking noob.</h1>
-        <img src=${person.dp}>`)
+        b += `<h1>I'm ${person.name} and I'm a fucking noob.</h1>
+        <img src=${person.dp}>`
     })
-    return (b.join(''))
+    return b
 }
 
 app.get('/', (req, res) => {
