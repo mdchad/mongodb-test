@@ -8,12 +8,9 @@ mongoose.Promise = global.Promise;
 
 // Connect to mongodb
 mongoose.connect('mongodb://localhost/testpanda');
-mongoose.connection.once('open', function(){
+mongoose.connection.once('open', () => {
     console.log('Connection has been made, now make fireworks...');
-    mongoose.connection.db.dropDatabase(function(){
-        console.log('drop db')
-    });
-}).on('error', function(error){
+}).on('error', (error) => {
     console.log('Connection error:', error);
 });
 
