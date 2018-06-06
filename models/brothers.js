@@ -10,9 +10,10 @@ const BrothersSchema = new Schema({
     timestamps: true 
 });
 
-const Testpanda = mongoose.model('testpandas', BrothersSchema);
+const Brother = mongoose.model('brothers', BrothersSchema);
 
 // module.exports = MarioChars;
 
-module.exports = Testpanda;
+module.exports.brother = Brother;
+module.exports.brothersSchema = BrothersSchema;
 

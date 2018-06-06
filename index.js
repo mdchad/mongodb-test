@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
-const Testpanda = require('./models/brothers')
+const Brothers = require('./models/brothers')
 const mongoose = require('mongoose');
 
 // ES6 Promises
 mongoose.Promise = global.Promise;
 
 // Connect to mongodb
-mongoose.connect('mongodb://localhost/testpanda');
+mongoose.connect('mongodb://localhost/brother');
 mongoose.connection.once('open', () => {
     console.log('Connection has been made, now make fireworks...');
 }).on('error', (error) => {
@@ -24,12 +24,12 @@ const html = (persons) => {
 }
 
 app.get('/', (req, res) => {
-    Testpanda.find({}, function(err, testpandas) {
+    Brothers.brother.find({}, function(err, brothers) {
         if (err) 
         {
          throw err;
         }
-        res.send(html(testpandas))
+        res.send(html(brothers))
       });
 })
 

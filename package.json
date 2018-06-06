@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon ./index.js",
     "resetdb": "node ./createDB.js",
-    "test": "mocha"
+    "test": "mocha ./test/connection.js",
+    "mocha": "./node_modules/mocha/.bin/option.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
     "mocha": "^5.2.0",
     "mongoose": "^5.1.2",
     "nodemon": "^1.17.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2"
   }
 }

@@ -1,4 +1,4 @@
-const Testpanda = require('./../models/brothers.js')
+const Brother = require('./../models/brothers.js')
 
 let brothers = [
     {
@@ -13,9 +13,9 @@ let brothers = [
     }
 ];
 
-let createTestDB = () => Testpanda.create(brothers, (err, brothers) => {
+let createDB = () => Brother.brother.create(brothers, (err, brothers) => {
   if (err) {}// ...
   // ...
 });
 
-module.exports = createTestDB
+module.exports = createDB
